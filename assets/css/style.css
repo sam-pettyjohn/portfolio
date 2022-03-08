@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #33a19c;
+    --background: #393939;
+    --text: #ffffff;
+}
+
+body {
+    background-color: var(--background);
+}
+
+/* Navigation */
+header {
+    padding: 20px 35px;
+    background-color: var(--primary-color);
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: ;
+    margin: 0;
+    display: inline;
+}
+
+header nav {
+    float: right;
+    margin: 7px 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 22px;
+}
+
+/* Home Section */
+
+
+/* Projects Section */
+
+
+/* Contact Section */
