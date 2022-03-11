@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --primary-color: #ffffff;
     --secondary-color: #1f1d1d;
@@ -47,7 +51,12 @@ header a {
 }
 
 header nav {
+    width: 50%;
     margin: 7px 0;
+}
+
+header nav ul {
+    float: right;
 }
 
 header nav ul li {
@@ -115,11 +124,90 @@ header nav ul li a {
     line-height: 1.6;
     font-size: 18px;
 }
+/* End About Me */
+
+/* Sub-Section: Education */
+.education {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px 130px;
+    overflow: auto;
+    align-self: auto;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.education h2 {
+    font-size: 30px;
+    padding-top: 65px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.school {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.curriculum {
+    margin: 20px;
+    flex: 1;
+}
 
 /* Section: Projects */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px 130px;
+    overflow: auto;
+    align-self: auto;
+    width: 100%;
+    margin: 0 auto;
+}
 
+.projects h2 {
+    font-size: 30px;
+    padding-top: 65px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.work {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.experience {
+    margin: 20px;
+    flex: 1;
+}
 
 /* Section: Contact */
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 130px;
+    overflow: auto;
+    align-self: auto;
+}
 
+.contact h2 {
+    font-size: 30px;
+    padding-top: 65px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--primary-color);
+}
 
 /* Footer */
