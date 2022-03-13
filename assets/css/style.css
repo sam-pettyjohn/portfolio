@@ -88,7 +88,7 @@ header nav ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 200px auto 1700px auto;
+    margin: 150px auto 1700px auto;
     width: 60%;
 }
 
@@ -104,14 +104,14 @@ header nav ul li a {
     padding-top: 20px;
 }
 
-/* .hero button {
+.button {
     margin-top: 25px;
-    background-image: url();
-    background-size: contain;
-    width: 300px;
-    height: 200px;
-} */
-
+    background-image: url(../icons/icons8-expand-arrow-50.png);
+    background-size: cover;
+    width: 40px;
+    height: 30px;
+    filter: invert(100%) sepia(99%) saturate(2%) hue-rotate(335deg) brightness(108%) contrast(100%);
+}
 /* End Hero */
 
 /* Section: About */
@@ -148,7 +148,10 @@ header nav ul li a {
 .about img {
     width: 600px;
     padding: 0 20px 20px 10px;
-    border-radius: 15px
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .bio-p {
@@ -171,7 +174,7 @@ header nav ul li a {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
-    padding: 20px 300px 20px 300px;
+    padding: 20px 300px 200px 300px;
     overflow: auto;
     align-self: auto;
     width: 100%;
@@ -446,21 +449,3 @@ footer {
         padding: 20px 100px;
     }
   }
-  
-
-
-  /* MEDIA QUERY FOR TABLETS AND SMALLER
-  @media screen and (max-width: 768px) {
-    
-  }
-  
-  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
-  /* @media screen and (max-width: 575px) {
-    .curriculum {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    }
-  } */ */
