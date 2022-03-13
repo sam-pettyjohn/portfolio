@@ -11,24 +11,30 @@ html {
 :root {
     --primary-color: #ffffff;
     --secondary-color: #1f1d1d;
-    --tertiary-color: ;
 }
 
 body {
     font-family: Roboto,sans-serif;
     color: var(--primary-color);
-    background-image: url(../images/image-from-rawpixel-id-434041-jpeg.jpg);
+    background-image: url(../images/dallas-skyline.jpg);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-weight: lighter;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 /* Navigation */
 header {
-    padding: 15px 130px;
+    padding: 15px 300px;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     flex-wrap: wrap;
     position: -webkit-sticky;
     position: sticky;
@@ -39,7 +45,7 @@ header {
 
 header h1 {
     font-weight: lighter;
-    font-size: 20px;
+    font-size: 21px;
     padding-top: 5px;
     color: var(--primary-color);
 }
@@ -51,12 +57,15 @@ header a {
 }
 
 header nav {
-    width: 50%;
     margin: 7px 0;
 }
 
 header nav ul {
-    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
 }
 
 header nav ul li {
@@ -67,8 +76,8 @@ header nav ul li {
 }
 
 header nav ul li a {
-    padding: 10px;
-    font-size: 16px;
+    padding: 10px 0 10px 15px;
+    font-size: 17px;
 }
 /* End Navigation */
 
@@ -79,7 +88,7 @@ header nav ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 100px auto 650px auto;
+    margin: 200px auto 1700px auto;
     width: 60%;
 }
 
@@ -94,6 +103,15 @@ header nav ul li a {
     font-weight: lighter;
     padding-top: 20px;
 }
+
+/* .hero button {
+    margin-top: 25px;
+    background-image: url();
+    background-size: contain;
+    width: 300px;
+    height: 200px;
+} */
+
 /* End Hero */
 
 /* Section: About */
@@ -102,7 +120,7 @@ header nav ul li a {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px 130px;
+    padding: 20px 300px;
     overflow: auto;
     align-self: auto;
 }
@@ -114,13 +132,34 @@ header nav ul li a {
     border-bottom: 1px solid var(--primary-color);
 }
 
-.bio img {
-    width: 300px;
-    padding: 20px 20px 20px 5px;
+.about-me {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.bio p {
-    padding: 20px 0px 20px 20px;
+.bio-img {
+    margin-top: 20px;
+    resize: both;
+    position: relative;
+    flex: 1;
+}
+
+.about img {
+    width: 600px;
+    padding: 0 20px 20px 10px;
+    border-radius: 15px
+}
+
+.bio-p {
+    margin-top: 20px;
+    resize: both;
+    position: relative;
+    flex: 1;
+}
+
+.bio-p p {
+    padding: 0 10px 20px 20px;
     line-height: 1.6;
     font-size: 18px;
 }
@@ -132,7 +171,7 @@ header nav ul li a {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
-    padding: 20px 130px;
+    padding: 20px 300px 20px 300px;
     overflow: auto;
     align-self: auto;
     width: 100%;
@@ -141,22 +180,79 @@ header nav ul li a {
 
 .education h2 {
     font-size: 30px;
-    padding-top: 65px;
+    padding-top: 20px;
     padding-bottom: 5px;
     border-bottom: 1px solid var(--primary-color);
 }
 
 .school {
-    width: 100%;
-    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
 .curriculum {
-    margin: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     flex: 1;
+}
+
+.uttyler {
+    background-image: linear-gradient(to top right, #002949, #1F4164);
+    margin: 0 15px 20px 5px;
+    border-radius: 5px;
+}
+
+.container-header {
+    padding: 0 15px 0 15px;
+}
+
+.uttyler h3 {
+    font-size: 30px;
+    font-weight: lighter;
+    padding: 35px 0 15px 0;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.uttyler h4 {
+    font-size: 22px;
+    font-weight: lighter;
+    padding: 15px 0 35px 0px;
+}
+
+.uttyler p {
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 1.6;
+    padding: 0 10px 35px 15px;
+}
+
+.bootcamp {
+    background-image: linear-gradient(to top right, #AE132A, #4E131F);
+    margin: 0 5px 20px 15px;
+    border-radius: 5px;
+}
+
+.bootcamp h3 {
+    font-size: 30px;
+    font-weight: lighter;
+    padding: 35px 0 15px 0;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.bootcamp h4 {
+    font-size: 22px;
+    font-weight: lighter;
+    padding: 15px 0 35px 0;
+}
+
+.bootcamp p {
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 1.6;
+    padding: 0 10px 35px 15px;
 }
 
 /* Section: Projects */
@@ -165,7 +261,7 @@ header nav ul li a {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
-    padding: 20px 130px;
+    padding: 20px 300px 0px 300px;
     overflow: auto;
     align-self: auto;
     width: 100%;
@@ -188,8 +284,61 @@ header nav ul li a {
 }
 
 .experience {
-    margin: 20px;
+    background-image: linear-gradient(to top right, #080808, #1f1e1c);
+    margin: 20px 5px 0 5px;
+    border-radius: 5px;
     flex: 1;
+}
+
+.experience img {
+    width: 420px;
+    padding: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+.experience h3 {
+    font-size: 30px;
+    font-weight: lighter;
+    padding: 20px 0 15px 0;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.experience p {
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 1.6;
+    padding: 15px 10px 35px 15px;
+}
+
+.resume {
+    font-size: 30px;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.resume h4 {
+    font-weight: lighter;
+    padding-right: 25px;
+    padding-top: 10px;
+}
+
+.resume a {
+    background-image: linear-gradient(to top right, #080808, #1f1e1c);
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: lighter;
+    font-size: 17px;
+    padding: 20px 25px 20px 25px;
+}
+
+.resume a:hover {
+    background-image: linear-gradient(to left, #1f1e1c, #080808);
 }
 
 /* Section: Contact */
@@ -198,16 +347,120 @@ header nav ul li a {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px 130px;
+    padding: 0px 300px;
     overflow: auto;
     align-self: auto;
 }
 
 .contact h2 {
     font-size: 30px;
-    padding-top: 65px;
+    padding-top: 200px;
     padding-bottom: 5px;
     border-bottom: 1px solid var(--primary-color);
 }
 
+.contact p {
+    margin: 20px 10px;
+}
+
 /* Footer */
+
+footer {
+    padding: 15px 300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--secondary-color);
+}
+
+.slack {
+    background: url(../icons/icons8-slack-new-90.png);
+    background-size: cover;
+    width:50px;
+    height:50px;
+    margin: 0 20px;
+    filter: invert(100%) sepia(99%) saturate(2%) hue-rotate(335deg) brightness(108%) contrast(100%);
+}
+
+.linkedin {
+    background: url(../icons/icons8-linkedin-90.png);
+    background-size: cover;
+    width:50px;
+    height:50px;
+    margin: 0 20px;
+    filter: invert(100%) sepia(99%) saturate(2%) hue-rotate(335deg) brightness(108%) contrast(100%);
+}
+
+.github {
+    background: url(../icons/icons8-github.svg);
+    background-size: cover;
+    width:50px;
+    height:50px;
+    margin: 0 20px;
+    filter: invert(100%) sepia(99%) saturate(2%) hue-rotate(335deg) brightness(108%) contrast(100%);
+}
+
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header {
+        padding: 15px 100px;
+    }
+
+    .about {
+        padding: 20px 100px;
+    }
+    
+    .about-me {
+        flex-direction: column;
+    }
+
+    .about img {
+        padding-left: 200px;
+    }
+
+    .education {
+        padding: 20px 100px;
+    }
+
+    .curriculum {
+        overflow: auto;
+        align-self: auto;
+        flex: auto;
+        justify-content: space-around;
+    }
+
+    .projects {
+        padding: 20px 100px;
+    }
+
+    .experience {
+        flex: auto;
+    }
+
+    .experience img {
+        width: 600px;
+    }
+
+    .contact {
+        padding: 20px 100px;
+    }
+  }
+  
+
+
+  /* MEDIA QUERY FOR TABLETS AND SMALLER
+  @media screen and (max-width: 768px) {
+    
+  }
+  
+  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+  /* @media screen and (max-width: 575px) {
+    .curriculum {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    }
+  } */ */
