@@ -116,13 +116,11 @@ header nav ul li a {
 
 /* Section: About */
 .about {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 20px 300px;
     overflow: auto;
     align-self: auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .about h2 {
@@ -135,7 +133,7 @@ header nav ul li a {
 .about-me {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .bio-img {
@@ -143,15 +141,13 @@ header nav ul li a {
     resize: both;
     position: relative;
     flex: 1;
-}
-
-.about img {
-    width: 600px;
+    max-width: 100%;
+    max-height: 100%;
     padding: 0 20px 20px 10px;
     border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .bio-p {
@@ -257,6 +253,7 @@ header nav ul li a {
     line-height: 1.6;
     padding: 0 10px 35px 15px;
 }
+/* End Education */
 
 /* Section: Projects */
 .projects {
@@ -294,7 +291,8 @@ header nav ul li a {
 }
 
 .experience img {
-    width: 420px;
+    max-width: 100%;
+    max-height: 100%;
     padding: 15px;
     display: block;
     margin-left: auto;
@@ -343,6 +341,7 @@ header nav ul li a {
 .resume a:hover {
     background-image: linear-gradient(to left, #1f1e1c, #080808);
 }
+/* End Projects */
 
 /* Section: Contact */
 .contact {
@@ -365,15 +364,19 @@ header nav ul li a {
 .contact p {
     margin: 20px 10px;
 }
+/* End Contact */
 
 /* Footer */
-
 footer {
     padding: 15px 300px;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     background-color: var(--secondary-color);
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
 }
 
 .slack {
@@ -402,50 +405,93 @@ footer {
     margin: 0 20px;
     filter: invert(100%) sepia(99%) saturate(2%) hue-rotate(335deg) brightness(108%) contrast(100%);
 }
+/* End Footer */
 
-
-/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1370px) {
     header {
         padding: 15px 100px;
     }
 
     .about {
-        padding: 20px 100px;
-    }
-    
-    .about-me {
-        flex-direction: column;
-    }
-
-    .about img {
-        padding-left: 200px;
+      padding: 15px 100px;
     }
 
     .education {
-        padding: 20px 100px;
+      padding: 15px 100px;
     }
 
     .curriculum {
-        overflow: auto;
-        align-self: auto;
-        flex: auto;
-        justify-content: space-around;
+      flex: 0 100%
     }
 
     .projects {
-        padding: 20px 100px;
+      padding: 15px 100px;
     }
 
     .experience {
-        flex: auto;
-    }
-
-    .experience img {
-        width: 600px;
+      flex: 0 100%
     }
 
     .contact {
-        padding: 20px 100px;
+      padding: 15px 100px;
     }
-  }
+
+    .contact h2 {
+      padding-top: 20px;
+    }
+
+    .footer {
+      padding: 15px 100px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    header {
+        padding: 10px 30px;
+        justify-content: center;
+    }
+
+    header h1 {
+        padding: 10px 0 10px 0;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .about {
+        padding: 10px 30px;
+    }
+
+    .about h2 {
+        padding-top: 50px;
+    }
+
+    .education {
+        padding: 10px 30px;
+    }
+
+    .curriculum {
+        flex: 0 100%
+    }
+
+    .projects {
+        padding: 10px 30px;
+    }
+
+    .experience {
+        flex: 0 100%
+    }
+
+    .contact {
+        padding: 10px 30px;
+    }
+
+    .contact h2 {
+        padding-top: 20px;
+    }
+
+    footer {
+        padding: 10px 30px;
+    }
+}
