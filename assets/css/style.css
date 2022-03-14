@@ -18,7 +18,7 @@ body {
     color: var(--primary-color);
     background-image: url(../images/dallas-skyline.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: fixed;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-weight: lighter;
